@@ -1,7 +1,10 @@
 namespace cap.db;
 using { enu } from './enu';
 
-
+type Price{
+  amount: Integer;
+  value: Integer;
+}
 entity Users{
         key id: Integer;
         Name: String(100);
@@ -22,4 +25,5 @@ entity Users{
 }
 entity Addresses {
   owner : Association to Employees;  //> the backlink
+  price:Price;
 }
